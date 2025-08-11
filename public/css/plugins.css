@@ -1,0 +1,41 @@
+/* Bootstrap CSS */
+@import "bootstrap.min.css";
+
+/* Preset CSS */
+@import "preset.css";
+
+/* Themewar Font CSS */
+@import "themewar-font.css";
+
+/*Themify css*/
+@import "themify-icons.css";
+
+/*Magnific Popup icons*/
+@import "magnific-popup.css";
+
+/* ET Line icons css*/
+@import "et-line.css";
+
+/* lightcase css*/
+@import "lightcase.css";
+
+/* Odometercss*/
+@import "odometer.min.css";
+
+/*Owl css*/
+@import "owl.css";
+
+/* Animate CSS */
+@import "animate.css";
+
+/* Nivo Slider CSS */
+@import "nivo-slider.css";
+
+/* sal CSS */
+@import "sal.css";
+
+/* Swiper Slider css*/
+@import "swiper-bundle.min.css";
+
+/* fancybox */
+@import "fancybox.css";

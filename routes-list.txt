@@ -1,0 +1,40 @@
++--------+-----------+--------------------------------------+----------------------------+------------------------------------------------------------+------------------------------------------+
+| Domain | Method    | URI                                  | Name                       | Action                                                     | Middleware                               |
++--------+-----------+--------------------------------------+----------------------------+------------------------------------------------------------+------------------------------------------+
+|        | GET|HEAD  | /                                    |                            | Closure                                                    | web                                      |
+|        | GET|HEAD  | about                                | aboutus                    | Illuminate\Routing\ViewController                          | web                                      |
+|        | GET|HEAD  | acheievement-awards                  | acheievement-awards        | Illuminate\Routing\ViewController                          | web                                      |
+|        | GET|HEAD  | admin/dashboard                      | admin.informationdashboard | App\Http\Controllers\InformationController@dashboard       | web                                      |
+|        | GET|HEAD  | admin/events                         | admin.events.index         | App\Http\Controllers\EventsController@index                | web                                      |
+|        | POST      | admin/events                         | admin.events.store         | App\Http\Controllers\EventsController@store                | web                                      |
+|        | GET|HEAD  | admin/events/create                  | admin.events.create        | App\Http\Controllers\EventsController@create               | web                                      |
+|        | GET|HEAD  | admin/events/{event}                 | admin.events.show          | App\Http\Controllers\EventsController@show                 | web                                      |
+|        | PUT|PATCH | admin/events/{event}                 | admin.events.update        | App\Http\Controllers\EventsController@update               | web                                      |
+|        | DELETE    | admin/events/{event}                 | admin.events.destroy       | App\Http\Controllers\EventsController@destroy              | web                                      |
+|        | GET|HEAD  | admin/events/{event}/edit            | admin.events.edit          | App\Http\Controllers\EventsController@edit                 | web                                      |
+|        | GET|HEAD  | admin/galleries                      | admin.galleries.index      | App\Http\Controllers\GalleryController@index               | web                                      |
+|        | POST      | admin/galleries                      | admin.galleries.store      | App\Http\Controllers\GalleryController@store               | web                                      |
+|        | GET|HEAD  | admin/galleries/create               | admin.galleries.create     | App\Http\Controllers\GalleryController@create              | web                                      |
+|        | GET|HEAD  | admin/galleries/{gallery}            | admin.galleries.show       | App\Http\Controllers\GalleryController@show                | web                                      |
+|        | PUT|PATCH | admin/galleries/{gallery}            | admin.galleries.update     | App\Http\Controllers\GalleryController@update              | web                                      |
+|        | DELETE    | admin/galleries/{gallery}            | admin.galleries.destroy    | App\Http\Controllers\GalleryController@destroy             | web                                      |
+|        | GET|HEAD  | admin/galleries/{gallery}/edit       | admin.galleries.edit       | App\Http\Controllers\GalleryController@edit                | web                                      |
+|        | GET|HEAD  | admin/information                    | admin.information.index    | App\Http\Controllers\InformationController@index           | web                                      |
+|        | POST      | admin/information                    | admin.information.store    | App\Http\Controllers\InformationController@store           | web                                      |
+|        | GET|HEAD  | admin/information/create             | admin.information.create   | App\Http\Controllers\InformationController@create          | web                                      |
+|        | GET|HEAD  | admin/information/{information}      | admin.information.show     | App\Http\Controllers\InformationController@show            | web                                      |
+|        | PUT|PATCH | admin/information/{information}      | admin.information.update   | App\Http\Controllers\InformationController@update          | web                                      |
+|        | DELETE    | admin/information/{information}      | admin.information.destroy  | App\Http\Controllers\InformationController@destroy         | web                                      |
+|        | GET|HEAD  | admin/information/{information}/edit | admin.information.edit     | App\Http\Controllers\InformationController@edit            | web                                      |
+|        | GET|HEAD  | admin/login                          | admin.                     | Closure                                                    | web                                      |
+|        | POST      | admin/login                          | admin.login                | App\Http\Controllers\AuthController@authenticate           | web                                      |
+|        | GET|HEAD  | admin/logout                         | admin.logout               | App\Http\Controllers\AuthController@logout                 | web                                      |
+|        | GET|HEAD  | api/user                             |                            | Closure                                                    | api                                      |
+|        |           |                                      |                            |                                                            | App\Http\Middleware\Authenticate:sanctum |
+|        | GET|HEAD  | competitions                         | competitions               | Illuminate\Routing\ViewController                          | web                                      |
+|        | GET|HEAD  | contact                              | contact                    | Illuminate\Routing\ViewController                          | web                                      |
+|        | GET|HEAD  | events                               | events                     | Closure                                                    | web                                      |
+|        | GET|HEAD  | gallery                              | gallery                    | Illuminate\Routing\ViewController                          | web                                      |
+|        | GET|HEAD  | sanctum/csrf-cookie                  |                            | Laravel\Sanctum\Http\Controllers\CsrfCookieController@show | web                                      |
+|        | GET|HEAD  | services                             | services                   | Illuminate\Routing\ViewController                          | web                                      |
++--------+-----------+--------------------------------------+----------------------------+------------------------------------------------------------+------------------------------------------+
