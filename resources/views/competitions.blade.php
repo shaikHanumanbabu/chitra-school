@@ -43,7 +43,7 @@
                             <p class="fw-normal lead">Competitions at Chithra help students step out of their comfort zones and embrace creative challenges. They learn that art isn't just about talent — it's about risk-taking, expression, and perseverance.</p>
                             <a class="custom-btn effect" href="contact.html">Contac Us</a>
                         </div>
-                        <div class="icon-lg"> 
+                        <div class="icon-lg">
                             <img src="images/icon-2.png" alt="" class="">
                         </div>
                     </div>
@@ -68,39 +68,32 @@
 </section>
 
 <section class="pricing-sec services">
-    <div class="container pt-4">    
+    <div class="container pt-4">
         <div class="row">
 
+
+            @foreach ($competitions as $competition)
             <div class="col-xl-6 col-lg-6 col-md-12 mb-30">
                 <div class="single-pricing-sec h-100">
                     <span class="pricing-tag"><i class="icon icon-tools"></i></span>
                     <div class="single-pricing-sec-header">
-                        <h2 class="single-pricing-sec-header-title">Colouring Competition <span>– Express to Impress</span></h2>
+                        <h2 class="single-pricing-sec-header-title">{{ $competition->getTitle() }}</h2>
 
                         <div class="single-pricing-sec-rating mt-3">
-                            <p class="fw-normal lead theme-secondary-color">Let colours speak your creativity!</p>
+                            {!! $competition->description !!}
                         </div>
                     </div>
 
-                    <div class="single-pricing-sec-content">
-                        <p class="fw-medium theme-secondary-color">Age Groups:</p>
-                        <ul>
-                            <li>Tiny Talents – Nursery, LKG, UKG</li>
-                            <li>Mini – Class I & II</li>
-                            <li>Sub Juniors – Class III & IV</li>
-                            <li>Juniors – Class V to VII</li>
-                            <li>Seniors – Class VIII to X (Own artwork allowed)</li>
-                        </ul>
-                    </div>
-                    <p class="mt-4">Any colour medium allowed</p>
-                    <p>Picture will be provided</p>
+
                     <div class="single-pricing-sec-price-wrapper">
                         <p class="single-pricing-plan-text">Entry Fee:</p>
-                        <h4 class="single-pricing-plan-price mb-0"><sup>₹</sup>100</h4>
+                        <h4 class="single-pricing-plan-price mb-0"><sup>₹</sup>{{ $competition->entry_fee }}</h4>
                         <span class="single-pricing-plan-package">per student</span>
                     </div>
                 </div>
             </div>
+            @endforeach
+
 
             <div class="col-xl-6 col-lg-6 col-md-12 mb-30">
                 <div class="single-pricing-sec h-100">

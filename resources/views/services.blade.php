@@ -32,46 +32,26 @@
     <div class="container">
         <div class="row">
 
+            @foreach ($services as $service)
             <div class="col-xl-6 col-lg-6 col-md-12 mb-30">
                 <div class="single-pricing-sec h-100">
                     <div class="single-pricing-sec-header">
                         <span class="pricing-tag"><i class="icon icon-tools"></i></span>
-                        <h2 class="single-pricing-sec-header-title">Art Classes for Kids & Adults</h2>
+                        <h2 class="single-pricing-sec-header-title">{{ $service->title  }}</h2>
                         <div class="single-pricing-sec-rating mt-3">
-                            <p class="fw-normal lead">At Chithra, we believe art is more than just drawing — it’s a journey of imagination, expression, and personal growth.</p>
+                            {!! $service->description !!}
                         </div>
                     </div>
 
-                    <div class="single-pricing-sec-content">
-                        <p class="fw-medium theme-secondary-color">Our art classes offer a perfect blend of:</p>
-                        <ul>
-                            <li>Art History & Artist Inspiration</li>
-                            <li>Creative Skills & Practical Techniques</li>
-                            <li>Hands-on Exploration of Multiple Art Forms</li>
-                        </ul>
 
-                        <p class="fw-medium theme-secondary-color">We ensure a fun-filled, enriching experience through:</p>
-
-                        <p>Creates an atmosphere of joy, discovery, and self-expression.</p>
-                        <p class="fw-medium">Explores creativity to:</p>
-                        <ul>
-                            <li>Cultivate a love for art</li>
-                            <li>Build confidence</li>
-                            <li>Enhance imagination and critical thinking</li>
-                        </ul>
-                        <p class="fw-medium">Manipulates different art media such as:</p>    
-                        <ul>
-                            <li>Drawing, painting, and crafts</li>
-                            <li>Collage, book art, and fabric art</li>
-                            <li>Puppetry and other playful forms of artistic expression</li>
-                        </ul>
-                    </div>
 
                     <div class="mt-auto">
-                        <a href="contact.html" class="theme-btn mt-4">Contact Us</a>
+                        <a href="{{ route('contact') }}" class="theme-btn mt-4">Contact Us</a>
                     </div>
                 </div>
             </div>
+            @endforeach
+
 
             <div class="col-xl-6 col-lg-6 col-md-12 mb-30">
                 <div class="single-pricing-sec h-100">
@@ -99,7 +79,7 @@
                             <li>Wellness-focused art workshops for children</li>
                             <li>A new theme every session</li>
                             <li>A wide variety of art styles and techniques</li>
-                        </ul> 
+                        </ul>
                     </div>
 
                     <div class="mt-auto">
@@ -163,7 +143,7 @@
                         <h3 class="single-pricing-sec-header-title">Parent-Child Art Classes</h3>
                         <div class="single-pricing-sec-rating mt-3">
                             <p class="fw-normal lead theme-secondary-color">Create unforgettable memories while learning together!</p>
-                        </div>                 
+                        </div>
                         <p>These sessions encourage bonding and creativity between parents and children through fun, themed activities.</p>
                     </div>
                 </div>
@@ -176,7 +156,7 @@
                         <h3 class="single-pricing-sec-header-title">Parent–Child Art Sessions</h3>
                         <div class="single-pricing-sec-rating mt-3">
                             <p class="fw-normal lead theme-secondary-color">Strengthen bonds while nurturing creativity!</p>
-                        </div>                 
+                        </div>
                     </div>
                     <div class="single-pricing-sec-content">
                         <p class="fw-medium">Our specially designed sessions for <span class="fw-medium">parents and childre</span> offer a beautiful space to <span class="fw-medium">create art together</span>. These interactive sessions enhance:</p>
@@ -196,7 +176,7 @@
                         <h3 class="single-pricing-sec-header-title">Painting for Adults</h3>
                         <div class="single-pricing-sec-rating mt-3">
                             <p class="fw-normal lead theme-secondary-color">Open Studio – All Levels Welcome!</p>
-                        </div>                 
+                        </div>
                     </div>
                     <div class="single-pricing-sec-content">
                         <p>Explore your inner artist in a relaxed studio setting. This class allows adults to paint freely, with <span class="fw-medium">personal guidance from expert instructors</span> at every stage. Whether you're a beginner or experienced, enjoy learning alongside like-minded creatives in an inspiring environment.</p>
@@ -211,7 +191,7 @@
                         <h3 class="single-pricing-sec-header-title">Children’s Painting Classes</h3>
                         <div class="single-pricing-sec-rating mt-3">
                             <p class="fw-normal lead theme-secondary-color">Where young artists become confident creators!</p>
-                        </div>                 
+                        </div>
                     </div>
                     <div class="single-pricing-sec-content">
                         <p class="fw-medium">Students learn <span class="fw-medium">essential painting and drawing techniques</span>, focusing on different styles and famous artists. Each session features:</p>

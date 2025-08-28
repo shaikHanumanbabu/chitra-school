@@ -3,6 +3,8 @@
 @section("content")
 
 
+
+
 <!-- Breadcrumb Wrapper Start -->
 <section class="page-header">
     <div class="page-header-bg" style="background-image: url(images/chithra-img-04.jpg)">
@@ -31,11 +33,38 @@
 </section> -->
 
 
+@foreach($galleries as $gallery)
+<div class="container mt-5">
+    <div class="card">
+        <div class="card-header">
+            <h3 class="mb-0">{{ $gallery->title }}</h3>
+        </div>
+
+        <div class="card-body">
+            @if($gallery->images->isEmpty())
+            <p class="text-muted">No images uploaded in this gallery.</p>
+            @else
+            <div class="row">
+                @foreach($gallery->images as $image)
+                <div class="col-md-3 col-sm-4 col-6 mb-4">
+                    <div class="card shadow-sm">
+                        <img src="{{ asset($image->image_path) }}" class="card-img-top img-fluid" alt="Gallery Image">
+                    </div>
+                </div>
+                @endforeach
+            </div>
+            @endif
+        </div>
+    </div>
+</div>
+@endforeach
+
+
 <!-- Gallery Section Start -->
 <section class="content-wrapper gallery-area">
     <div class="container-fluid">
 
-        <div class="row mb-4"> 
+        <div class="row mb-4">
             <div class="col-12">
                 <h3 class="gallery-title">Our Competitions</h3>
             </div>

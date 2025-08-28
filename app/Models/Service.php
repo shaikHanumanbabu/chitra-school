@@ -4,17 +4,16 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\SoftDeletes;
 
-class Gallery extends Model
+class Service extends Model
 {
     use HasFactory;
+
+    use SoftDeletes;
+
     protected $fillable = [
         'title',
+        'description',
     ];
-
-    // Relationship: Gallery has many images
-    public function images()
-    {
-        return $this->hasMany(GalleryImage::class);
-    }
 }

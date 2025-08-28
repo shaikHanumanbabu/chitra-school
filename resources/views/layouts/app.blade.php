@@ -42,7 +42,7 @@
                     <div class="topbar">
                         <p><i class="twi-bolt"></i>Need Help: Providing Innovative and Easy Solutions, Call 08455-315262</p>
                         <div class="tpRight">
-                            <a class="lang" href="javascript:void(0);"><i class="twi-globe2"></i>English</a>
+                            <!-- <a class="lang" href="javascript:void(0);"><i class="twi-globe2"></i>English</a> -->
                             <div class="tpSocail">
                                 <a href="javascript:void(0);"><i class="twi-facebook-f"></i></a>
                                 <a href="javascript:void(0);"><i class="twi-twitter"></i></a>
@@ -181,6 +181,7 @@
 
 
 
+
     <!-- Footer Sec Start -->
     <footer class="footer">
         <div class="container">
@@ -286,6 +287,8 @@
     <script src="{{ asset('js/fontawesome.js') }}"></script>
     <!-- Swiper JS -->
     <script src="{{ asset('js/swiper-bundle.min.js') }}"></script>
+    <!-- fancybox JS -->
+    <script src="{{ asset('js/jquery.fancybox.min.js') }}"></script>
     <!-- owl JS -->
     <script src="{{ asset('js/owl.js') }}"></script>
     <!--Custom js -->

@@ -20,6 +20,9 @@
     <!-- Custom styles for this template-->
     <link href="{{ asset('admin/css/sb-admin-2.min.css') }}" rel="stylesheet">
 
+    <script src="https://cdn.ckeditor.com/ckeditor5/41.2.1/classic/ckeditor.js"></script>
+
+
     {{-- Page-specific CSS --}}
     @stack('styles')
 </head>
@@ -132,6 +135,21 @@
                 <a class="nav-link" href="{{ route('admin.events.index') }}">
                     <i class="fas fa-fw fa-chart-area"></i>
                     <span>Event</span></a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="{{ route('admin.galleries.index') }}">
+                    <i class="fas fa-fw fa-chart-area"></i>
+                    <span>Galleries</span></a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="{{ route('admin.services.index') }}">
+                    <i class="fas fa-fw fa-chart-area"></i>
+                    <span>Services</span></a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="{{ route('admin.competations.index') }}">
+                    <i class="fas fa-fw fa-chart-area"></i>
+                    <span>Competations</span></a>
             </li>
 
             <!-- Nav Item - Tables -->

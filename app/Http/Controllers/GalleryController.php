@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Gallery;
+use App\Models\GalleryImage;
 use Illuminate\Http\Request;
 
 class GalleryController extends Controller
@@ -15,6 +16,9 @@ class GalleryController extends Controller
     public function index()
     {
         //
+        return view('admin.galleries.index', [
+            'galleries' => Gallery::all()
+        ]);
     }
 
     /**
@@ -24,7 +28,8 @@ class GalleryController extends Controller
      */
     public function create()
     {
-        //
+
+        return view('admin.galleries.create');
     }
 
     /**
@@ -36,6 +41,39 @@ class GalleryController extends Controller
     public function store(Request $request)
     {
         //
+        $validated_data = $request->validate([
+            'title' => 'required|string|max:255',
+            'images.*' => 'required|image|mimes:jpg,jpeg,png,gif,webp|max:10240',
+        ]);
+
+
+        // Create the gallery record
+        $gallery = Gallery::create([
+            'title' => $validated_data['title'],
+        ]);
+
+        // Handle file uploads
+        if ($request->hasFile('images')) {
+            foreach ($request->file('images') as $image) {
+                $imageName = time() . '_' . uniqid() . '.' . $image->getClientOriginalExtension();
+                $destinationPath = public_path('gallery');
+
+                // Make sure the directory exists
+                if (!file_exists($destinationPath)) {
+                    mkdir($destinationPath, 0755, true);
+                }
+
+                $image->move($destinationPath, $imageName);
+
+                // Save relative path to DB
+                GalleryImage::create([
+                    'gallery_id' => $gallery->id,
+                    'image_path' => 'gallery/' . $imageName, // relative path
+                ]);
+            }
+        }
+
+        return redirect()->route('admin.galleries.index')->with('success', 'Gallery created!');
     }
 
     /**
@@ -80,6 +118,8 @@ class GalleryController extends Controller
      */
     public function destroy(Gallery $gallery)
     {
-        //
+        // Soft delete the event
+        $gallery->delete();
+        return redirect()->back()->with('success', 'Gallery deleted successfully.');
     }
 }
