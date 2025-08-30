@@ -4,6 +4,13 @@
 |        | GET|HEAD  | /                                     |                            | Closure                                                    | web                                      |
 |        | GET|HEAD  | about                                 | aboutus                    | Illuminate\Routing\ViewController                          | web                                      |
 |        | GET|HEAD  | acheievement-awards                   | acheievement-awards        | Illuminate\Routing\ViewController                          | web                                      |
+|        | GET|HEAD  | admin/carousels                       | admin.carousels.index      | App\Http\Controllers\CarouselController@index              | web                                      |
+|        | POST      | admin/carousels                       | admin.carousels.store      | App\Http\Controllers\CarouselController@store              | web                                      |
+|        | GET|HEAD  | admin/carousels/create                | admin.carousels.create     | App\Http\Controllers\CarouselController@create             | web                                      |
+|        | GET|HEAD  | admin/carousels/{carousel}            | admin.carousels.show       | App\Http\Controllers\CarouselController@show               | web                                      |
+|        | PUT|PATCH | admin/carousels/{carousel}            | admin.carousels.update     | App\Http\Controllers\CarouselController@update             | web                                      |
+|        | DELETE    | admin/carousels/{carousel}            | admin.carousels.destroy    | App\Http\Controllers\CarouselController@destroy            | web                                      |
+|        | GET|HEAD  | admin/carousels/{carousel}/edit       | admin.carousels.edit       | App\Http\Controllers\CarouselController@edit               | web                                      |
 |        | GET|HEAD  | admin/competations                    | admin.competations.index   | App\Http\Controllers\CompetationController@index           | web                                      |
 |        | POST      | admin/competations                    | admin.competations.store   | App\Http\Controllers\CompetationController@store           | web                                      |
 |        | GET|HEAD  | admin/competations/create             | admin.competations.create  | App\Http\Controllers\CompetationController@create          | web                                      |
@@ -45,8 +52,9 @@
 |        | GET|HEAD  | admin/services/{service}/edit         | admin.services.edit        | App\Http\Controllers\ServiceController@edit                | web                                      |
 |        | GET|HEAD  | api/user                              |                            | Closure                                                    | api                                      |
 |        |           |                                       |                            |                                                            | App\Http\Middleware\Authenticate:sanctum |
-|        | GET|HEAD  | competitions                          | competitions               | Illuminate\Routing\ViewController                          | web                                      |
+|        | GET|HEAD  | competitions                          | competitions               | Closure                                                    | web                                      |
 |        | GET|HEAD  | contact                               | contact                    | Illuminate\Routing\ViewController                          | web                                      |
+|        | POST      | contact                               | contact.submit             | App\Http\Controllers\ContactController@submit              | web                                      |
 |        | GET|HEAD  | events                                | events                     | Closure                                                    | web                                      |
 |        | GET|HEAD  | gallery-info                          | gallery                    | Closure                                                    | web                                      |
 |        | GET|HEAD  | sanctum/csrf-cookie                   |                            | Laravel\Sanctum\Http\Controllers\CsrfCookieController@show | web                                      |

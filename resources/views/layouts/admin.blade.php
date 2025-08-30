@@ -152,6 +152,12 @@
                     <span>Competations</span></a>
             </li>
 
+            <li class="nav-item">
+                <a class="nav-link" href="{{ route('admin.carousels.index') }}">
+                    <i class="fas fa-fw fa-chart-area"></i>
+                    <span>Carousels</span></a>
+            </li>
+
             <!-- Nav Item - Tables -->
             <li class="nav-item">
                 <a class="nav-link" href="tables.html">

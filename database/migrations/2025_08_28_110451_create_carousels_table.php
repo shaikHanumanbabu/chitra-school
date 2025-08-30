@@ -15,6 +15,11 @@ class CreateCarouselsTable extends Migration
     {
         Schema::create('carousels', function (Blueprint $table) {
             $table->id();
+            $table->string('title_1');
+            $table->string('title_2');
+            $table->text('description');
+            $table->string('image');
+            $table->softDeletes(); // Removes 'deleted_at'
             $table->timestamps();
         });
     }

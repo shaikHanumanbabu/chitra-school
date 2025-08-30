@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\AuthController;
+use App\Http\Controllers\CarouselController;
 use App\Http\Controllers\CompetationController;
 use App\Http\Controllers\ContactController;
 use App\Http\Controllers\EventsController;
@@ -75,5 +76,6 @@ Route::prefix("admin")->name("admin.")->group(function () {
     Route::resource('/galleries', GalleryController::class);
     Route::resource('/services', ServiceController::class);
     Route::resource('/competations', CompetationController::class);
+    Route::resource('/carousels', CarouselController::class);
     Route::get('/dashboard', [InformationController::class, 'dashboard'])->name('information')->name("dashboard");
 });

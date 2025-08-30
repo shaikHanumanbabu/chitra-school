@@ -7,61 +7,31 @@
 <div class="slider-area slider-layout1">
     <div class="bend niceties preview-1">
         <div id="ensign-nivoslider-1" class="slides">
-            <img src="images/slider1.jpg" alt="slider" title="#slider-direction-1" />
-            <img src="images/slider2.jpg" alt="slider" title="#slider-direction-2" />
-            <img src="images/slider3.jpg" alt="slider" title="#slider-direction-3" />
+            @foreach (\App\Models\Carousel::all() as $carousel)
+            <img src="{{ asset($carousel->image) }}" alt="slider" title="#slider-direction-{{ $carousel->id }}" />
+            @endforeach
         </div>
-        <div id="slider-direction-1" class="t-cn slider-direction">
+
+        @foreach (\App\Models\Carousel::all() as $carousel)
+        <div id="slider-direction-{{ $carousel->id }}" class="t-cn slider-direction">
             <div class="slider-content s-tb slide-1">
                 <div class="text-left title-container s-tb-c">
                     <div class="container">
-                        <p class="item-subtitle">Welcome to</p>
-                        <h2 class="item-title">Chithra - The School of Art</h2>
-                        <div class="item-paragraph">We proudly launched Chithra – The School of Art on September 20th, 2023, with the mission to nurture creativity across all age groups, including school students, homemakers, and working professionals.</div>
-                        <ul class="item-btn">
+                        <p class="item-subtitle">{{ $carousel->title_1 }}</p>
+                        <h2 class="item-title">{{ $carousel->title_2 }}</h2>
+                        <div class="item-paragraph">{!! $carousel->description !!}</div>
+                        <!-- <ul class="item-btn">
                             <li><a href="service.html">Services<i class="fas fa-long-arrow-alt-right"></i></a></li>
                             <li><a href="https://www.youtube.com/watch?v=qz0aGYrrlhU" class="circle-btn popup_video"><span class="circle-icon"><i class="fas fa-play-circle"></i>Watch The Video</span></a></li>
-                        </ul>
+                        </ul> -->
                     </div>
                 </div>
             </div>
         </div>
+        @endforeach
 
-        <div id="slider-direction-2" class="t-cn slider-direction">
-            <div class="slider-content s-tb slide-2">
-                <div class="text-left title-container s-tb-c">
-                    <div class="container">
-                        <p class="item-subtitle">About Us</p>
-                        <h2 class="item-title">Chithra is more than a school</h2>
-                        <div class="item-paragraph">
-                            It's a creative hub where imagination meets skill.
-                        </div>
-                        <ul class="item-btn">
-                            <li><a href="about.html">About Us<i class="fas fa-long-arrow-alt-right"></i></a>
-                            </li>
-                            <li><a href="https://www.youtube.com/watch?v=qz0aGYrrlhU" class="circle-btn popup_video"><span class="circle-icon"><i class="fas fa-play-circle"></i>Watch The Video</span></a>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </div>
 
-        <div id="slider-direction-3" class="t-cn slider-direction">
-            <div class="slider-content s-tb slide-3">
-                <div class="text-left title-container s-tb-c">
-                    <div class="container">
-                        <p class="item-subtitle">Our Servies</p>
-                        <h2 class="item-title">CHITHRA – The School of Art</h2>
-                        <div class="item-paragraph">Inspiring Creativity | Igniting Talent | Organizers of State-Level Art Competitions</div>
-                        <ul class="item-btn">
-                            <li><a href="service.html">Purchase<i class="fas fa-long-arrow-alt-right"></i></a></li>
-                            <li><a href="https://www.youtube.com/watch?v=qz0aGYrrlhU" class="circle-btn popup_video"><span class="circle-icon"><i class="fas fa-play-circle"></i>Watch The Video</span></a></li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </div>
+
 
     </div>
 </div>
@@ -78,7 +48,7 @@
                         <h4 class="dz-title m-b15"><a href="services.html">Art Classes for Kids & Adults</a></h4>
                         <a class="custom-btn effect" href="services.html">Read More</a>
                     </div>
-                    <div class="icon-lg"> 
+                    <div class="icon-lg">
                         <img src="images/icon-1.png" alt="" class="">
                     </div>
                 </div>
@@ -91,7 +61,7 @@
                         <h4 class="dz-title m-b15"><a href="services.html">Art Diploma Courses</a></h4>
                         <a class="custom-btn effect" href="services.html">Read More</a>
                     </div>
-                    <div class="icon-lg"> 
+                    <div class="icon-lg">
                         <img src="images/icon-4.png" alt="" class="">
                     </div>
                 </div>
@@ -103,7 +73,7 @@
                         <h4 class="dz-title m-b15"><a href="services.html">Art Competitions for Students</a></h4>
                         <a class="custom-btn effect" href="services.html">Read More</a>
                     </div>
-                    <div class="icon-lg"> 
+                    <div class="icon-lg">
                         <img src="images/icon-5.png" alt="" class="">
                     </div>
                 </div>
@@ -266,7 +236,7 @@
                             <p class="fw-normal lead">Competitions at Chithra help students step out of their comfort zones and embrace creative challenges. They learn that art isn't just about talent — it's about risk-taking, expression, and perseverance.</p>
                             <a class="custom-btn effect" href="competitions.html">Contac Us</a>
                         </div>
-                        <div class="icon-lg"> 
+                        <div class="icon-lg">
                             <img src="images/icon-2.png" alt="" class="">
                         </div>
                     </div>
