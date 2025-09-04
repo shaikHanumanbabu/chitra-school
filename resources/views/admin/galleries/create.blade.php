@@ -10,7 +10,7 @@
 <h1 class="h3 mb-2 text-gray-800">Create Gallery</h1>
 <p class="mb-4">
 
-  <a target="_blank" href="{{ route('admin.galleries.index') }}">Back</a>.
+  <a href="{{ route('admin.galleries.index') }}">Back</a>.
 </p>
 
 <div class="container mt-5">

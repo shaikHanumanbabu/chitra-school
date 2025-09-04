@@ -10,7 +10,7 @@
 <h1 class="h3 mb-2 text-gray-800">Create Competation</h1>
 <p class="mb-4">
 
-  <a target="_blank" href="{{ route('admin.competations.index') }}">Back</a>.
+  <a href="{{ route('admin.competations.index') }}">Back</a>.
 </p>
 
 <div class="container mt-5">

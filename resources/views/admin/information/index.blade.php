@@ -3,20 +3,16 @@
 @section('content')
 
 
-@if (session('success'))
-    <x-alert type="success">
-        {{ session('success') }}
-    </x-alert>
-@endif
+
 
 @if ($errors->any())
-    <x-alert type="danger">
-        <ul>
-            @foreach ($errors->all() as $error)
-                <li>{{ $error }}</li>
-            @endforeach
-        </ul>
-    </x-alert>
+<x-alert type="danger">
+  <ul>
+    @foreach ($errors->all() as $error)
+    <li>{{ $error }}</li>
+    @endforeach
+  </ul>
+</x-alert>
 @endif
 
 
@@ -26,7 +22,7 @@
     @method('PATCH')
     <div class="form-row align-items-center">
 
-    
+
       <div class="col">
         <input type="text" class="form-control mb-2" placeholder="Enter something" value="{{ old('title', $information->title) }}" name="title">
       </div>

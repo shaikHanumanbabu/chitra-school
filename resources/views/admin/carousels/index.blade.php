@@ -10,7 +10,7 @@
 <h1 class="h3 mb-2 text-gray-800">Carousels</h1>
 <p class="mb-4">
 
-  <a target="_blank" href="{{ route('admin.carousels.create') }}">Create carousel</a>.
+  <a href="{{ route('admin.carousels.create') }}">Create carousel</a>.
 </p>
 
 <!-- DataTales Example -->

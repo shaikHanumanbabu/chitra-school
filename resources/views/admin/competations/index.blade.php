@@ -10,7 +10,7 @@
 <h1 class="h3 mb-2 text-gray-800">Competations</h1>
 <p class="mb-4">
 
-  <a target="_blank" href="{{ route('admin.competations.create') }}">Create competation</a>.
+  <a href="{{ route('admin.competations.create') }}">Create competation</a>.
 </p>
 
 <!-- DataTales Example -->

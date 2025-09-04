@@ -10,7 +10,7 @@
 <h1 class="h3 mb-2 text-gray-800">Services</h1>
 <p class="mb-4">
 
-  <a target="_blank" href="{{ route('admin.services.create') }}">Create service</a>.
+  <a href="{{ route('admin.services.create') }}">Create service</a>.
 </p>
 
 <!-- DataTales Example -->
